@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PASSWORD GENERATOR BY HARSH TRIVEDI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS File ne link kari  -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <h1>Password Generator</h1>
+
+         <!-- Display Container -->
+        <div class="display-container">
+             <!-- aama apde random password bane che ama apde jate koi password enter karta nathi mate aaa read only content che mate apde ane read only lakhiyu che,
+                 pachi apde aa place me shu hold karshe(placeholder) nakhiyu jya apdo password ava no che  -->
+
+            <!-- MMMMIIIMMMPP -->
+            <!-- ahiya "data-passwordDisplay" a <input> tag nu custome attribute che , have apde ichiye to aa custome-attribute ne Queryselector vali method thi ane 'fetch' kari 
+                shakiye chiye ...apde ichiye to apde tag thi,ID thi, Class thi pan 'fetch' kari shakiye chiye.....pan ani sivay apde HTML ELEMENT ne 'Custom-attribute' thi pan "Fetch" kari shakiye chiye   -->
+            <input readonly placeholder="Password" class="display" data-passwordDisplay>
+
+            <!-- copy valu button -->
+            <button class="copyBtn" data-copy>
+                <!-- aa copy vala buttom ma image(copy ni j image dekhay k aa copy mate nu button che te[copy valu icon]) and copy thya pachi "Copied" avo massage ave che  -->
+                <!-- ahiya "data-copyMsg" a custome attribut che aa <span> tag nu  -->
+                
+                <span class="tooltip" data-copyMsg></span>
+                <img src="./assets/copy.svg" alt="copy" width="23" height="23">
+            </button>
+
+        </div>
+
+        <!-- Input Container -->
+        <div class="input-container">
+
+            <!--password length section-->
+            <div class="length-container">
+                <p>Password Length</p>
+                <!-- Password length ne Display kare che  -->
+                <!-- aa number ne apde JS ni help thi change karishu mate mate apde ane "data-lengthNumber" naam no <p> tag no custome attribute apiyo che , atle k aa <p> tag ne apde JS thi Access karishu -->
+                <p data-lengthNumber>0</p>
+            </div>
+            
+            <!--slider-->
+            <!-- The step attribute is a number that specifies the granularity that the value must adhere to or the keyword any. 
+                It is valid for the numeric input types, including the date, month, week, time, datetime-local, number and range types.
+                The step sets the stepping interval when clicking up and down spinner buttons, moving a slider left and right on a range, 
+                and validating the different date types. If not explicitly included, step defaults to 1 for number and range, and 1 unit type (minute, week, month, day) for the date/time input types. 
+                The value must be a positive number - integer or float — or the special value any, which means no stepping is implied and any value is allowed (barring other constraints, such as min and max).
+             -->
+             <!-- Slider ne Left to Right lai jaishu to apdi value ketali vadhe/Ghate te naki karva mate aa "step" Attribute no use thay che  -->
+             <!-- ahiya Slider ne agal pachal kariye to number change thashe mate ahiya JS nu logic lagelu che mate ane apde ID ,Class,Tag api ne access kari shakiye chiye or else Custome-Attribute no use kari ne pan
+                 JS ne Access kari shakiye chiye , apde ahiya almost akha code ma Custome Attribute( ahiya 'data-lengthSlider') no use kari ne CCode karishu -->
+            <input type="range" min="1" max="20" class="slider" step="1" data-lengthSlider>
+
+            <!-- checkboxes-->
+            <div class="check">
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Includes Uppercase letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">Includes Lowercase letters</label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Includes Numbers </label>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Includes Symbols </label>
+            </div>
+
+            <!-- strength section-->
+            <div class="strength-container">
+                <p>Strength</p>
+                <!-- j Password Storng/Weak che te dekhadva Circle banavabu che te mate aa <div> tag banaviyu and tema custome Attribute pan apiyu apde 'data-indicator'  -->
+                <div class="indicator" data-indicator></div>
+            </div>
+
+            <!-- generate password-->
+            <button class="generateButton">Generate Password</button>
+
+        </div>
+
+    </div>
+     <!-- JS ni file add link kari  -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -106,7 +106,6 @@ h1 {
     top:50%;
     right:1.5rem;
     transform: translateY(-50%);
-
 }
 
 .input-container{
@@ -188,7 +187,9 @@ h1 {
     appearance: none;
     width: 20px;
     height: 20px;
-    border: 1px solid var(--vb-cyan);
+    /* HERE */
+    border: 2px solid rgb(134, 93, 4);
+    /* border: 1px solid var(--vb-cyan); */
     cursor: pointer;
     /* apde 'tick' ne aa input tag upar over laap karavva nu che  */
     position: relative;
@@ -197,7 +198,9 @@ h1 {
 
 /* tick kariye tyare nu Style */
 .check input:checked{
-    background-color: var(--vb-cyan);
+    /* HERE */
+    background-color: rgb(121, 233, 9);
+    /* background-color: var(--vb-cyan); */
 }
 
 /* CSS ni content Property mujab spde Before and After no use kari koi pan Image tag no use kari ne tick ni image ne tickkaravi shakiye chiye ....pana pde tana thi pan easy way no use karishu ..apde tick(✔️) na symbol no use karishu  */
